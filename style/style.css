@@ -28,7 +28,7 @@ header {
     width: 100%;
     justify-content: space-between;
     background-color: #14a3a8;
-    border-bottom: 2px solid rgb(30 76 81);
+    border-bottom: 4px solid rgb(30 76 81);
     padding: 0.5rem 1rem 0rem 0.5rem
 }
 
@@ -39,8 +39,10 @@ header {
 
 /* logo */
 header .logo img {
-    max-width: 24rem;    /* ............................non so */
+    max-width: 24rem;
+    /* ............................non so */
 }
+
 /* tasto cerca */
 header .search {
     align-self: center;
@@ -83,50 +85,83 @@ header .utilities a {
     border-radius: 50%;
     padding: 0.5rem 0.4rem;
     margin-right: 0.5rem;
-    background-color:#119ba0;
+    background-color: #119ba0;
 }
 
-#login{
+#login {
     padding: 0.5rem 0.5rem;
 }
 
 /* aggiunta vetrina */
 /* il problema delle altezze (rapporti) */
-.main_header-vetrina_flex-container{
+.main_header-vetrina_flex-container {
     flex-direction: column;
 }
+
 .main_header-vetrina_flex-container>.header_flex-container {
-
-
+    /* ci vorrebbe una proporzione tra l'header e la vetrina ma fallisco */
 }
-.main_header-vetrina_flex-container>.vetrina{
-    background-image: url(../img/vetrina2.webp);
+
+.main_header-vetrina_flex-container>.vetrina {
+    background-image: url(../img/vetrina2.webp); 
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 0 0;
     min-height: 450px;
     max-height: 600px;
-
-}
-.vetrina>#buynow{
-    background-image:url(../img/buynow.png);
-    background-position: center;
-    background-size: contain;
-    display: inline-block;
-    background-repeat: no-repeat;
-    /* border: 1px solid black; */
-   width: 100%;
-   margin-top:310px;
-   height: 60px;
-
- 
-
+    border-bottom: 6px solid rgb(30 76 81);
 }
 
-.vetrina img{
+.vetrina img {
     width: 100%;
     max-height: 500px;
 }
+
+/* bottone boynow */
+.buynow_flex-container {
+    justify-content: center;
+}
+
+
+.vetrina #buynow {
+    display: block;
+    text-align: center;
+    line-height: 3.4rem;
+    text-decoration: none;
+    color: white;
+    font-family: fantasy;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.4rem;
+    font-size: 2rem;
+    text-shadow: 0px 3px #144444;
+   background-color:#119ba0;
+    border: 5px outset  rgb(85 192 203);
+/*    background-color:  #ff1151;
+    border: 5px outset  #ad4c62; */
+    border-radius: 2rem;
+    /* width: 15rem;
+    height: 4rem; */
+    margin-top:310px;
+    width: 200px;
+    height: 60px;
+
+}
+
+/* effetti pulsanti */
+
+header .utilities a:hover,
+.vetrina #buynow:hover{
+    background-color: #21a7ac;
+    border-style:outset;
+    border-color:  rgb(69 169 179);
+} 
+header .utilities a:active,
+.vetrina #buynow:active{
+    background-color: #1f8e92;
+    border-style:inset;
+    border-color: rgb(69 169 179);
+} 
+
 
 
 
