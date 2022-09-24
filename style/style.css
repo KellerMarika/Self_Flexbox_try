@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* class utilityes */
+
+[class*="flex-container"] {
+    border: 1px, solid rgb(29, 35, 41);
+    display: flex;
+}
+
+/* ..................................................... */
+/*  h1 (indicizzato ma non visibile */
+header h1 {
+    display: inline-block;
+    text-indent: -9999999999px;
+}
+header{
+    width: 100%;
+}
+.header_flex-container {
+    width: 100%;
+    justify-content: space-between;
+    background-color: #1a897f;
+    border-bottom: 2px solid rgb(30 76 81);
+    padding: 0.5rem 1rem 0rem 0.5rem
+    
+
+}
+
+.header_flex-container>*{
+flex-grow: 1;
+flex-shrink: 2;
+}
+
+
+header .logo img {
+    max-width: 24rem;
+
+}
+
+header .search{
+    align-self: center;
+    flex-grow: 5;
+    flex-shrink: 1;
+    text-align: center;    
+}
+header [type=search]{
+    width: 90%;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid rgb(15 113 123);
+    border-radius: 0.5rem;
+}
+
+header .utilities{
+    text-align: right;
