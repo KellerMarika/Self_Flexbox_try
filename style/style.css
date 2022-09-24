@@ -12,47 +12,70 @@
 }
 
 /* ..................................................... */
+
 /*  h1 (indicizzato ma non visibile */
 header h1 {
     display: inline-block;
     text-indent: -9999999999px;
 }
-header{
+
+header {
     width: 100%;
 }
+
 .header_flex-container {
     width: 100%;
     justify-content: space-between;
-    background-color: #1a897f;
+    background-color: #14a3a8;
     border-bottom: 2px solid rgb(30 76 81);
     padding: 0.5rem 1rem 0rem 0.5rem
-    
-
 }
 
-.header_flex-container>*{
-flex-grow: 1;
-flex-shrink: 2;
+.header_flex-container>* {
+    flex-grow: 1;
+    flex-shrink: 2;
 }
 
 
 header .logo img {
     max-width: 24rem;
-
+    /* ............................non so */
 }
 
-header .search{
+header .search {
     align-self: center;
     flex-grow: 5;
     flex-shrink: 1;
-    text-align: center;    
+    text-align: center;
 }
-header [type=search]{
+
+input[type=search] {
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+header [type=search] {
     width: 90%;
     padding: 0.3rem 0.5rem;
     border: 2px solid rgb(15 113 123);
     border-radius: 0.5rem;
+    color: #2a3131;
+    font-weight: bold;
 }
 
-header .utilities{
+header [type=search]:focus {
+    background-color: rgb(245, 245, 169);
+}
+
+header .utilities {
     text-align: right;
+    padding-top: 0.4rem;
+}
+
+header .utilities a {
+    padding-right: 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+}
