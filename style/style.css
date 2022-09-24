@@ -163,5 +163,27 @@ header .utilities a:active,
 } 
 
 
+/* main .............................................. */
+
+.main_flex-container{
+    flex-direction: row;
+}
+.nav_flex-container{
+    flex-direction: column;
+}
+
+[class^="categories"]{
+    border: 1px solid grey;
+     overflow: hidden;
+     height: 2.5rem;
+}
 
 
+[class^="categories"]>a{
+
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: fantasy;
+    color:rgb(26 41 49);
+}
