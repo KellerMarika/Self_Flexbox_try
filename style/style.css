@@ -7,7 +7,6 @@
 /* class utilityes */
 
 [class*="flex-container"] {
-    border: 1px, solid rgb(29, 35, 41);
     display: flex;
 }
 
@@ -18,6 +17,8 @@ header h1 {
     display: inline-block;
     text-indent: -9999999999px;
 }
+
+/* header */
 
 header {
     width: 100%;
@@ -36,12 +37,11 @@ header {
     flex-shrink: 2;
 }
 
-
+/* logo */
 header .logo img {
-    max-width: 24rem;
-    /* ............................non so */
+    max-width: 24rem;    /* ............................non so */
 }
-
+/* tasto cerca */
 header .search {
     align-self: center;
     flex-grow: 5;
@@ -68,6 +68,8 @@ header [type=search]:focus {
     background-color: rgb(245, 245, 169);
 }
 
+/* utilities button */
+
 header .utilities {
     text-align: right;
     padding-top: 0.4rem;
@@ -77,5 +79,54 @@ header .utilities a {
     padding-right: 1rem;
     text-decoration: none;
     font-size: 1.5rem;
+    border: 3px outset rgb(69 169 179);
+    border-radius: 50%;
+    padding: 0.5rem 0.4rem;
+    margin-right: 0.5rem;
+    background-color:#119ba0;
+}
+
+#login{
+    padding: 0.5rem 0.5rem;
+}
+
+/* aggiunta vetrina */
+/* il problema delle altezze (rapporti) */
+.main_header-vetrina_flex-container{
+    flex-direction: column;
+}
+.main_header-vetrina_flex-container>.header_flex-container {
+
 
 }
+.main_header-vetrina_flex-container>.vetrina{
+    background-image: url(../img/vetrina2.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    min-height: 450px;
+    max-height: 600px;
+
+}
+.vetrina>#buynow{
+    background-image:url(../img/buynow.png);
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+    background-repeat: no-repeat;
+    /* border: 1px solid black; */
+   width: 100%;
+   margin-top:310px;
+   height: 60px;
+
+ 
+
+}
+
+.vetrina img{
+    width: 100%;
+    max-height: 500px;
+}
+
+
+
