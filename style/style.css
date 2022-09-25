@@ -103,7 +103,7 @@ header .utilities a {
 }
 
 .main_header-vetrina_flex-container>.vetrina {
-    background-image: url(../img/vetrina2.webp); 
+    background-image: url(../img/vetrina2.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 0 0;
@@ -134,81 +134,182 @@ header .utilities a {
     word-spacing: 0.4rem;
     font-size: 2rem;
     text-shadow: 0px 3px #144444;
-   background-color:#119ba0;
-    border: 5px outset  rgb(85 192 203);
-/*    background-color:  #ff1151;
-    border: 5px outset  #ad4c62; */
+    background-color: #119ba0;
+    border: 5px outset rgb(85 192 203);
     border-radius: 2rem;
-    /* width: 15rem;
-    height: 4rem; */
-    margin-top:310px;
+    margin-top: 310px;
     width: 200px;
     height: 60px;
-
 }
 
 /* effetti pulsanti */
 
 header .utilities a:hover,
-.vetrina #buynow:hover{
+.vetrina #buynow:hover {
     background-color: #21a7ac;
-    border-style:outset;
-    border-color:  rgb(69 169 179);
-} 
-header .utilities a:active,
-.vetrina #buynow:active{
-    background-color: #1f8e92;
-    border-style:inset;
+    border-style: outset;
     border-color: rgb(69 169 179);
-} 
+}
+
+header .utilities a:active,
+.vetrina #buynow:active {
+    background-color: #1f8e92;
+    border-style: inset;
+    border-color: rgb(69 169 179);
+}
 
 
-/* main .............................................. */
+/* MAIN .............................................. */
 
-.main_flex-container{
+
+/* contenitore di navbar + section + aside */
+.main_flex-container {
     flex-direction: row;
 }
-.nav_flex-container{
+/* navbar contenitore tendine */
+.nav_flex-container {
     flex-direction: column;
+}
+
+
+/* tendina( input + label>ul) */
+.categories_item_flex-container{
+    flex-direction: row-reverse;
+    border:2px solid black;
+    border-bottom: 0;
+    padding-bottom:2.5rem;
+    border-top-right-radius: 1.6rem;
+    background-image: url(../img/grey.jpg);
+    background-repeat: repeat-x;
+    background-size: 100% 4rem;
+    padding-left: 1.2rem;
+    margin-bottom: -2rem;
+    margin-left: -1rem;
+    justify-content: space-between;
+   
+ }
+
+ /* dinamica estrazione tendina */
+ .categories_item_flex-container:hover{
+position: relative;
+top: -1rem;
+}
+
+/* footer navbar - fix estrazione ultima tendina */
+.nav_flex-container::after{
+    content: "";
     border: 1px solid black;
+    border-top: 0;
+    padding-bottom:3rem;
 }
 
-[class^="categories"]{
-     overflow: hidden;
-     height: 4rem; 
-}
-
-[class^="categories"]:hover{
-     overflow:visible;
-     height: fit-content;
-}
-
-
-[class^="categories"]>h2{
-    border: 1px solid black; 
-}
-[class^="categories"]>h2>a{
-
+/* stile title tendina */
+nav #label-plus h2 {
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
     font-family: fantasy;
-    color:rgb(26 41 49);
-    
-}
-[class^="categories"]>h2{
-    padding: 0.6rem 1rem;
+    color: rgb(26 41 49);
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 1.6rem; 
 }
 
-.categories-list{
+/* stile checkbox tendina  */
+nav #plus{
+align-self: flex-start;
+margin: 1.4rem;
+visibility:hidden;
+}
+
+nav #plus:checked{
+visibility:hidden;
+}
+
+/* plusante tendina */
+nav #plus::before{
+    content: url(../img/plus.png);
+    visibility: visible;
+}
+nav #plus:checked::before{
+    content: url(../img/minus.png);
+    visibility: visible; 
+}
+
+
+/* meccanismo tendina attraverso checkbox ...... */
+.categories_item_flex-container>input[type=checkbox] + label{
     padding: 0.6rem 1rem;
-   list-style-type: none;
-   font-family: sans-serif;
-   font-size: 1.2rem;
-   line-height: 1.6rem;
-   
+    font-family: sans-serif;
+    height: 4rem;
+    overflow: hidden;
+}
+.categories_item_flex-container>input[type=checkbox]:checked + label{
+    height: fit-content;    
+}
+
+/* stile lite */
+.categories-list{
+ padding-top: 0.6rem;
+
+}
+.categories-list li{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    list-style-type: none;
 }
 .categories-list label{
-    padding-left: 0.6rem;
+    margin-left: 0.8rem;
+    text-transform: capitalize;
 }
 
+/* stile checkbox li */
+.categories-list input[type=checkbox] {
+    visibility:hidden;
+}
+.categories-list input[type=checkbox]:checked{
+visibility:hidden;
+}
+
+.categories-list input[type=checkbox]::before{
+    content: url(../img/checkbox-list0.png);
+    visibility: visible;
+}
+.categories-list input[type=checkbox]:checked::before{
+    content: url(../img/checkbox-list1.png);
+    visibility: visible;  
+}
+
+#novità h2::before{
+    content: url(../img/fumetti.png);
+    padding-right: 20px;
+}
+#manga h2::before{
+    content: url(../img/fumetti.png);
+    padding-right: 20px;
+}
+#comic h2::before{
+    content: url(../img/fumetti.png);
+    padding-right: 20px;
+}
+#dvd h2::before{
+    content: url(../img/fumetti.png);
+    padding-right: 20px;
+}
+#gadjets h2::before{
+    content: url(../img/fumetti.png);
+    padding-right: 20px;
+}
+#cosplay h2::before{
+    content: url(../img/fumetti.png);
+    padding-right: 20px;
+}
+#games h2::before{
+    content: url(../img/fumetti.png);
+    padding-right: 20px;
+}
+#outlet h2::before{
+    content: url(../img/fumetti.png);
+    padding-right: 20px;
+}
+/* ................................................................ */
