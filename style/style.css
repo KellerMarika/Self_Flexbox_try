@@ -170,20 +170,45 @@ header .utilities a:active,
 }
 .nav_flex-container{
     flex-direction: column;
+    border: 1px solid black;
 }
 
 [class^="categories"]{
-    border: 1px solid grey;
      overflow: hidden;
-     height: 2.5rem;
+     height: 4rem; 
+}
+
+[class^="categories"]:hover{
+     overflow:visible;
+     height: fit-content;
 }
 
 
-[class^="categories"]>a{
+[class^="categories"]>h2{
+    border: 1px solid black; 
+}
+[class^="categories"]>h2>a{
 
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
     font-family: fantasy;
     color:rgb(26 41 49);
+    
 }
+[class^="categories"]>h2{
+    padding: 0.6rem 1rem;
+}
+
+.categories-list{
+    padding: 0.6rem 1rem;
+   list-style-type: none;
+   font-family: sans-serif;
+   font-size: 1.2rem;
+   line-height: 1.6rem;
+   
+}
+.categories-list label{
+    padding-left: 0.6rem;
+}
+
