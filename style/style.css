@@ -207,6 +207,7 @@ top: -1rem;
     border:5px double rgb(0, 0, 0);
     border-top: 0;
     padding-bottom:3rem;
+    border-left: 0px;
 }
 
 /* stile title tendina */
@@ -302,4 +303,50 @@ visibility:hidden;
 #gadjets .icon_categories-item{
    margin-right: 1.6rem;
 }
-/* ................................................................ */
+
+
+/* .....SECTION articoli in vendita........................................................... */
+.product_flex-container{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* immagine prodotto */
+
+.product-img img{
+    width: 12rem;
+}
+.product-shortcut-utilities_flex-container,
+.product-img,
+.product-info{
+    border: 1px solid rgb(214, 214, 214);
+}
+/* wishlist e carrello */
+.product-shortcut-utilities_flex-container{
+    justify-content: space-between;    
+}
+
+.product-shortcut-utilities_flex-container>a{
+    padding: 0.2rem 0.6rem;
+    text-decoration:none;
+    font-size: 1.4rem;
+}
+
+.product-info{
+    text-align: center;
+}
+
+.product-info h3{
+    font-family: fantasy;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.product-info .price{
+    color: #f83354;
+    font-family:sans-serif;
+    font-weight: ;
+}
