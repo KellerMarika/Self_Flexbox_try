@@ -169,26 +169,32 @@ header .utilities a:active,
 /* navbar contenitore tendine */
 .nav_flex-container {
     flex-direction: column;
+    background-color: #6aacaf6b;
+    border-top-right-radius: 1.6rem;    
+    position: relative;
+    top: -5px;
 }
-
 
 /* tendina( input + label>ul) */
 .categories_item_flex-container{
     flex-direction: row-reverse;
-    border:2px solid black;
+    border:5px double rgb(0, 0, 0);
     border-bottom: 0;
     padding-bottom:2.5rem;
     border-top-right-radius: 1.6rem;
-    background-image: url(../img/grey.jpg);
+    background-image: url(../img/lightblack.jpg);
     background-repeat: repeat-x;
-    background-size: 100% 4rem;
+    background-size: 100% 4.5rem;
     padding-left: 1.2rem;
-    margin-bottom: -2rem;
+    margin-bottom: -2.8rem;
     margin-left: -1rem;
     justify-content: space-between;
-   
- }
+    
+    }
 
+ .categories_item_flex-container:nth-child(2n){
+    background-image: url(../img/lightblack2.jpg);
+ }
  /* dinamica estrazione tendina */
  .categories_item_flex-container:hover{
 position: relative;
@@ -198,7 +204,7 @@ top: -1rem;
 /* footer navbar - fix estrazione ultima tendina */
 .nav_flex-container::after{
     content: "";
-    border: 1px solid black;
+    border:5px double rgb(0, 0, 0);
     border-top: 0;
     padding-bottom:3rem;
 }
@@ -209,10 +215,13 @@ nav #label-plus h2 {
     text-decoration: none;
     text-transform: uppercase;
     font-family: fantasy;
-    color: rgb(26 41 49);
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 0px black;
     display: inline-block;
     margin-right: 2rem;
     margin-bottom: 1.6rem; 
+    vertical-align: middle;
 }
 
 /* stile checkbox tendina  */
@@ -229,7 +238,7 @@ visibility:hidden;
 /* plusante tendina */
 nav #plus::before{
     content: url(../img/plus.png);
-    visibility: visible;
+     visibility: visible;
 }
 nav #plus:checked::before{
     content: url(../img/minus.png);
@@ -280,36 +289,17 @@ visibility:hidden;
     visibility: visible;  
 }
 
-#novità h2::before{
-    content: url(../img/fumetti.png);
-    padding-right: 20px;
+.icon_categories-item{
+    font-size: 2rem;
+    margin-right: 1rem;
+    vertical-align: text-bottom;
 }
-#manga h2::before{
-    content: url(../img/fumetti.png);
-    padding-right: 20px;
+
+#novità .icon_categories-item{
+    margin-right:0.6rem;
 }
-#comic h2::before{
-    content: url(../img/fumetti.png);
-    padding-right: 20px;
-}
-#dvd h2::before{
-    content: url(../img/fumetti.png);
-    padding-right: 20px;
-}
-#gadjets h2::before{
-    content: url(../img/fumetti.png);
-    padding-right: 20px;
-}
-#cosplay h2::before{
-    content: url(../img/fumetti.png);
-    padding-right: 20px;
-}
-#games h2::before{
-    content: url(../img/fumetti.png);
-    padding-right: 20px;
-}
-#outlet h2::before{
-    content: url(../img/fumetti.png);
-    padding-right: 20px;
+
+#gadjets .icon_categories-item{
+   margin-right: 1.6rem;
 }
 /* ................................................................ */
