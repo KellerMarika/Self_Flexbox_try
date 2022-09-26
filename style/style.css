@@ -162,57 +162,78 @@ header .utilities a:active,
 /* MAIN .............................................. */
 
 
-/* contenitore di navbar + section + aside */
+/* contenitore sidebar + section + ? */
 .main_flex-container {
     flex-direction: row;
 }
-/* navbar contenitore tendine */
-.nav_flex-container {
+
+/* sidebar contenitore tendine */
+.aside_flex-container {
     flex-direction: column;
     background-color: #6aacaf6b;
-    border-top-right-radius: 1.6rem;    
+    border-top-right-radius: 1.6rem;
     position: relative;
     top: -5px;
+   /* height: 100%; */
+
+}
+
+.main_flex-container #sidebar {
+    flex-basis: 300px;
+    flex-shrink: 0; /* non fa ridurre la sidebar */
+    flex-grow: 0;
+
+}
+
+.main_flex-container #shop {
+    flex-basis: 75%;
+    flex-shrink: 1;
+    flex-grow: 2;
+}
+
+.main_flex-container #user-module {
+    flex-basis: 18%;
+    flex-shrink: 20;
 }
 
 /* tendina( input + label>ul) */
-.categories_item_flex-container{
+.categories_item_flex-container {
     flex-direction: row-reverse;
-    border:5px double rgb(0, 0, 0);
+    border: 5px double rgb(0, 0, 0);
     border-bottom: 0;
-    padding-bottom:2.5rem;
+    padding-bottom: 2.5rem;
     border-top-right-radius: 1.6rem;
     background-image: url(../img/lightblack.jpg);
     background-repeat: repeat-x;
     background-size: 100% 4.5rem;
-    padding-left: 1.2rem;
+    padding-left: 0.6rem;
     margin-bottom: -2.8rem;
     margin-left: -1rem;
     justify-content: space-between;
-    
-    }
-
- .categories_item_flex-container:nth-child(2n){
-    background-image: url(../img/lightblack2.jpg);
- }
- /* dinamica estrazione tendina */
- .categories_item_flex-container:hover{
-position: relative;
-top: -1rem;
 }
 
-/* footer navbar - fix estrazione ultima tendina */
-.nav_flex-container::after{
+.categories_item_flex-container:nth-child(2n) {
+    background-image: url(../img/lightblack2.jpg);
+}
+
+/* dinamica estrazione tendina */
+.categories_item_flex-container:hover {
+    position: relative;
+    top: -1rem;
+}
+
+/* footer asidebar - fix estrazione ultima tendina */
+.aside_flex-container::after {
     content: "";
-    border:5px double rgb(0, 0, 0);
+    border: 5px double rgb(0, 0, 0);
     border-top: 0;
-    padding-bottom:3rem;
+    padding-bottom: 3rem;
     border-left: 0px;
 }
 
 /* stile title tendina */
-nav #label-plus h2 {
-    font-size: 2rem;
+aside #label-plus h2 {
+    font-size: 1.8rem;
     text-decoration: none;
     text-transform: uppercase;
     font-family: fantasy;
@@ -221,123 +242,140 @@ nav #label-plus h2 {
     text-shadow: 3px 3px 0px black;
     display: inline-block;
     margin-right: 2rem;
-    margin-bottom: 1.6rem; 
+    margin-bottom: 1.6rem;
     vertical-align: middle;
 }
 
 /* stile checkbox tendina  */
-nav #plus{
-align-self: flex-start;
-margin: 1.4rem;
-visibility:hidden;
+aside #plus {
+    align-self: flex-start;
+    margin: 1.4rem;
+    visibility: hidden;
 }
 
-nav #plus:checked{
-visibility:hidden;
+aside #plus:checked {
+    visibility: hidden;
 }
 
 /* plusante tendina */
-nav #plus::before{
+aside #plus::before {
     content: url(../img/plus.png);
-     visibility: visible;
+    visibility: visible;
 }
-nav #plus:checked::before{
+
+aside #plus:checked::before {
     content: url(../img/minus.png);
-    visibility: visible; 
+    visibility: visible;
 }
 
 
 /* meccanismo tendina attraverso checkbox ...... */
-.categories_item_flex-container>input[type=checkbox] + label{
+.categories_item_flex-container>input[type=checkbox]+label {
     padding: 0.6rem 1rem;
     font-family: sans-serif;
     height: 4rem;
     overflow: hidden;
 }
-.categories_item_flex-container>input[type=checkbox]:checked + label{
-    height: fit-content;    
+
+.categories_item_flex-container>input[type=checkbox]:checked+label {
+    height: fit-content;
 }
 
 /* stile lite */
-.categories-list{
- padding-top: 0.6rem;
+.categories-list {
+    padding-top: 0.6rem;
 
 }
-.categories-list li{
+
+.categories-list li {
     font-size: 1.2rem;
     line-height: 1.8rem;
     list-style-type: none;
 }
-.categories-list label{
+
+.categories-list label {
     margin-left: 0.8rem;
     text-transform: capitalize;
 }
 
 /* stile checkbox li */
 .categories-list input[type=checkbox] {
-    visibility:hidden;
-}
-.categories-list input[type=checkbox]:checked{
-visibility:hidden;
+    visibility: hidden;
 }
 
-.categories-list input[type=checkbox]::before{
+.categories-list input[type=checkbox]:checked {
+    visibility: hidden;
+}
+
+.categories-list input[type=checkbox]::before {
     content: url(../img/checkbox-list0.png);
     visibility: visible;
 }
-.categories-list input[type=checkbox]:checked::before{
+
+.categories-list input[type=checkbox]:checked::before {
     content: url(../img/checkbox-list1.png);
-    visibility: visible;  
+    visibility: visible;
 }
 
-.icon_categories-item{
+.icon_categories-item {
     font-size: 2rem;
     margin-right: 1rem;
     vertical-align: text-bottom;
 }
 
-#novità .icon_categories-item{
-    margin-right:0.6rem;
+#novità .icon_categories-item {
+    margin-right: 0.6rem;
 }
 
-#gadjets .icon_categories-item{
-   margin-right: 1.6rem;
+#gadjets .icon_categories-item {
+    margin-right: 1.6rem;
 }
 
 
 /* .....SECTION articoli in vendita........................................................... */
-.product_flex-container{
+.product_flex-container {
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content:space-around;
+    align-content: space-around;
+    
 }
+ .product_flex-container .product{
+    margin: 2rem
+ }
 
 /* immagine prodotto */
 
-.product-img img{
+.product-img img {
     width: 12rem;
 }
-.product-shortcut-utilities_flex-container,
-.product-img,
-.product-info{
-    border: 1px solid rgb(214, 214, 214);
-}
-/* wishlist e carrello */
-.product-shortcut-utilities_flex-container{
-    justify-content: space-between;    
+.product-img{
+    padding: 0.8rem 1rem;
 }
 
-.product-shortcut-utilities_flex-container>a{
+.product-shortcut-utilities_flex-container,
+.product-img,
+.product-info {
+    border: 1px solid rgb(214, 214, 214);
+    background-image:linear-gradient( #cbfdff, #bcdada69);
+    
+}
+
+/* wishlist e carrello */
+.product-shortcut-utilities_flex-container {
+    justify-content: space-between;
+}
+
+.product-shortcut-utilities_flex-container>a {
     padding: 0.2rem 0.6rem;
-    text-decoration:none;
+    text-decoration: none;
     font-size: 1.4rem;
 }
 
-.product-info{
+.product-info {
     text-align: center;
 }
 
-.product-info h3{
+.product-info h3 {
     font-family: fantasy;
     text-transform: capitalize;
     font-weight: normal;
@@ -345,8 +383,13 @@ visibility:hidden;
     text-align: center;
 }
 
-.product-info .price{
+.product-info .price {
     color: #f83354;
-    font-family:sans-serif;
-    font-weight: ;
+    font-family: sans-serif;
 }
+
+    /* .................................... */
+
+    #user-module{
+background-color: #2a3131;
+    }
